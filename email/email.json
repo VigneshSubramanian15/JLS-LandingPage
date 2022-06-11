@@ -1,0 +1,27 @@
+{
+    "email": "vignesh@gmail.com",
+    "ip": "::1",
+    "uaData": {
+        "ua": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Mobile Safari/537.36",
+        "browser": {
+            "name": "Chrome",
+            "version": "102.0.0.0",
+            "major": "102"
+        },
+        "engine": {
+            "name": "Blink",
+            "version": "102.0.0.0"
+        },
+        "os": {
+            "name": "Android",
+            "version": "6.0"
+        },
+        "device": {
+            "vendor": "LG",
+            "model": "Nexus 5",
+            "type": "mobile"
+        },
+        "cpu": {}
+    },
+    "time": 1654961483303
+},
