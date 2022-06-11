@@ -46,7 +46,7 @@ export default function Home() {
                 ) {
                   setError(false);
                   axios
-                    .post("http://localhost:3000/api/email", {
+                    .post(process.env.URL + "email", {
                       email,
                     })
                     .then((res) => {
