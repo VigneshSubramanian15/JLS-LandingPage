@@ -25,11 +25,12 @@ export default function Home() {
         <p className="text-lg md:text-2xl text-center m-3 md:m-5">
           Everything about legal education <br /> is about to change
         </p>
-        <div>
-          <div className="flex-row sm:flex-col m-2">
+        <div className="w-auto">
+          <div className="flex-col sm:flex-row flex m-2">
             <input
+              style={{ minWidth: "300px" }}
               className={`sm:w-96 border-2 border-black rounded sm:rounded-br-none sm:rounded-tr-none w-full p-1 ${
-                error && "border-red-500"
+                error ? "border-red-500" : ""
               }`}
               placeholder="Enter your email address"
               onChange={(e) => setEmail(e.target.value)}
@@ -61,7 +62,7 @@ export default function Home() {
               }}
               displayPopup={displayPopup}
               hidePopup={() => setDisplayPopup(false)}
-              className="px-4 border-l-0 bg-black text-white border-2 border-black rounded mt-1 w-full sm:w-auto sm:mt-0 sm:rounded-bl-none sm:rounded-tl-none p-1 "
+              className="px-4 border-l-0 bg-black text-white border-2 border-black rounded mt-1 w-full sm:w-auto sm:mt-0 sm:rounded-bl-none sm:rounded-tl-none min-w-fit p-1 "
             >
               Apply for <span className="font-bold">Early Access</span>
             </PopupModel>
