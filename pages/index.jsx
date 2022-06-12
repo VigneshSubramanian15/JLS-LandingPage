@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import PopupModel from "../src/popupModel";
@@ -46,7 +45,7 @@ export default function Home() {
                 ) {
                   setError(false);
                   axios
-                    .post(process.env.URL + "email", {
+                    .post("/api/email", {
                       email,
                     })
                     .then((res) => {
