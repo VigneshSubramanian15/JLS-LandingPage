@@ -1,8 +1,7 @@
 // /lib/dbConnect.js
 import mongoose from "mongoose";
 
-const MONGODB_URI =
-  "mongodb+srv://vignesh:77723442@jls.uzzgb.mongodb.net/test?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error(
