@@ -1,6 +1,6 @@
 .container {
   height: 100vh;
-  background-image: url("../public/asserts/image/bg.png");
+  background-image: url("../public/asserts/image/bg.webp");
   background-size: cover;
 }
 

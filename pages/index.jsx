@@ -50,9 +50,9 @@ export default function Home() {
       </Head>
 
       <div className="h-screen flex flex-col  items-center justify-center">
-        <section className=" p-10 rounded border-2 border-black  text-center">
+        <section className=" px-10 py-1 rounded-lg border-2 border-black  text-center">
           <h1 className="text-7xl md:text-9xl font-bold ">JUST</h1>
-          <h2 className="text-3xl md:text-5xl">Law School</h2>
+          <h2 className="text-3xl md:text-5xl font-bold">LAW SCHOOL</h2>
         </section>
         <p className="text-lg md:text-2xl text-center m-3 md:m-5">
           Everything about legal education <br /> is about to change
