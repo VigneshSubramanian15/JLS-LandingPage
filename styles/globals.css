@@ -45,6 +45,19 @@ a {
   background: white;
   border-radius: 7px;
 }
+.PopupModel .modal {
+  max-width: 700px !important;
+  width: 100% !important;
+}
+.PopupModel .modal .modal-dialog {
+  width: 100% !important;
+}
+
+.PopupModel .modal .card {
+  max-width: 700px !important;
+  width: 100% !important;
+}
+
 .PopupModel .content h2 {
   margin-bottom: 20px;
 }
