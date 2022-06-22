@@ -50,11 +50,11 @@ export default function Home() {
       </Head>
 
       <div className="h-screen flex flex-col items-center justify-center">
-        <section className=" px-16 pt-7 pb-4 m-2 md:w-auto w-96 rounded-lg border-2 border-black bg-white text-center">
+        <section className=" px-16 pt-7 pb-4 m-2 md:w-auto w-80 sm:w-96 rounded-lg border-2 border-black bg-white text-center">
           {/* <h1 className="text-7xl md:text-9xl font-bold ">JUST</h1>
           <h2 className="text-3xl md:text-5xl font-bold">LAW SCHOOL</h2> */}
           <Image
-            src={"/../public/asserts/image/jls.webp"}
+            src={"/asserts/image/jls.webp"}
             alt="jls"
             width={340}
             height={170}
