@@ -10,11 +10,16 @@ export default function handler(req, res) {
     return dbConnect()
       .then(() => {
         console.log("Connected to MongoDB");
-        EmailList.create({
-          email,
-          ip,
-          uaData,
-        }).then(() => res.send("ok"));
+        EmailList.findOne({ email }).then((data) => {
+          if (data) {
+            return res.status(401).send("Email already exist");
+          }
+          return EmailList.create({
+            email,
+            ip,
+            uaData,
+          }).then(() => res.status(201).send("ok"));
+        });
       })
       .catch((err) => {
         console.log("connection error", err);

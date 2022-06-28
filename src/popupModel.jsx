@@ -6,6 +6,7 @@ export default function PopupModel({
   className,
   displayPopup,
   hidePopup,
+  popupErrorMessage,
   ...prop
 }) {
   return (
@@ -32,8 +33,10 @@ export default function PopupModel({
                   />
                   <h4>CONGRATULATIONS!</h4>
                   <p className="m-1 px-10">
-                    {`You've been added to our early access list.`} <br /> we
-                    will keep you posted.
+                    {`You've been ${
+                      popupErrorMessage ? popupErrorMessage : ""
+                    } added to our early access list.`}{" "}
+                    <br /> we will keep you posted.
                   </p>
                   <button className="px-4 m-1 border-l-0 bg-black text-white border-2 border-black rounded mt-1 w-full sm:w-auto sm:mt-0 sm:rounded-bl-none sm:rounded-tl-none min-w-fit p-1">
                     CONTINUE

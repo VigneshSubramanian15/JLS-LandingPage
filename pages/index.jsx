@@ -9,6 +9,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [pageLoaded, setpageLoaded] = useState(false);
+  const [popupErrorMessage, setPopupErrorMessage] = useState("");
 
   useEffect(() => {
     setpageLoaded(true);
@@ -34,7 +35,10 @@ export default function Home() {
           setDisplayPopup(true);
         })
         .catch((err) => {
-          console.log({ err });
+          console.log({ err: err.response.data });
+          setDisplayPopup(true);
+          if ("Email already exist" === err.response.data)
+            setPopupErrorMessage("already");
         });
     } else {
       setError(true);
@@ -74,7 +78,13 @@ export default function Home() {
                 error ? "border-red-500 bg-red-100" : ""
               }`}
               placeholder="E-mail address"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              onKeyDown={(e) => {
+                console.log(e.key);
+                if (e.key === "Enter") handleSubmit();
+              }}
               required
               value={email}
               type={"email"}
@@ -83,6 +93,7 @@ export default function Home() {
               onClick={handleSubmit}
               displayPopup={displayPopup}
               hidePopup={() => setDisplayPopup(false)}
+              popupErrorMessage={popupErrorMessage}
               className="px-4 border-l-0 bg-black text-white border-2 border-black rounded mt-1 w-full sm:w-auto sm:mt-0 sm:rounded-bl-none sm:rounded-tl-none min-w-fit p-1 "
             >
               Apply for <span className="font-bold">Early Access</span>
